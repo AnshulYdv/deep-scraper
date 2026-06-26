@@ -23,5 +23,19 @@ Clone the repository and set up a Python virtual environment (Python 3.9+ recomm
 git clone https://github.com/AnshulYdv/deep-scraper.git
 cd deep-scraper
 
+# Set up virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+Once installed, run the scraper from your terminal by specifying the target URL, the recursion depth, and the output filename:
+python deep_scraper.py --url https://example.com --depth 2 --output results.json
+```
+## Ethical Usage
+
+This tool is designed with respect for web standards: it automatically checks `robots.txt` files to ensure compliance with site-specific crawling policies and includes configurable delays to prevent server overload. 
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
